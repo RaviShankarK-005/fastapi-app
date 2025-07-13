@@ -13,6 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the entire project
 COPY . .
 
+ENV DATABASE_URL=mysql+mysqlconnector://root:root@host.docker.internal:3306/fastapi
+
 # Expose port
 EXPOSE 8000
 
